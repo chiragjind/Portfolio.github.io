@@ -1,0 +1,707 @@
+@import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Irish+Grover&family=Reenie+Beanie&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Reenie Beanie', cursive;
+    scroll-behavior:smooth;
+}
+::-webkit-scrollbar {
+    height: 12px;
+    width: 4px;
+    background: var(--dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: gray;
+    box-shadow: 0px 1px 2px var(--dark);
+}
+
+::-webkit-scrollbar-corner {
+    background: var(--dark);
+}
+
+.navbar{
+    padding: 0.2rem 1rem;
+    font-size: 1.5rem;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    background-color: #fbfdff;
+    opacity: 0.7;
+}
+
+.navbar-brand{
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 3.5rem;
+    margin-left: 2rem;
+    text-transform: uppercase;
+} 
+.img-logo{
+    max-width: 70px;
+    max-height: 60px;
+}
+
+.nav-item{
+    margin-right: 1rem;
+}
+
+.navbar-nav{
+    margin-right: 8rem;
+}
+.navbar-toggler{
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    font-weight: 800;
+} 
+.nav-link{
+    transition: all 0.5s linear0;
+    font-weight: 600;
+    color: black;
+}
+.nav-link:hover{
+    color: black;
+    font-size: 2rem;
+    font-family: 'Reenie Beanie', cursive;
+}
+ul li{
+    list-style: none;
+}
+
+ul li a{
+    color: gray;
+    border-radius: 10px ;
+    padding: 8px 25px;
+    margin: 0 10px;
+    text-decoration: none;
+    position: relative;
+}
+
+ul li a::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: all 0.5s;
+    transform-origin: bottom;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    border-top: 2px solid gray;
+    border-left: 2px solid gray;
+}
+ul li a::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: all 0.5s;
+    transform-origin: bottom;
+    box-sizing: border-box;
+    bottom: 0;
+    right: 0;
+    border-bottom: 2px solid gray;
+    border-right: 2px solid gray;
+}
+
+ul li a:hover::before,
+ul li a:hover:after{
+     width: 10%;
+     height: 20%;
+     transform: rotate(360deg);
+}
+
+/* section first */
+
+.firstcol{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: antiquewhite; */
+}
+.text-container{
+    padding: 1rem 1rem;
+    font-size: 5rem;
+    margin-bottom: 2rem;
+}
+.text-container2{
+    margin-top: 2rem;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    min-width: 100%;
+}
+.title{
+    font-size: 5rem;
+    font-family: 'Irish Grover', cursive;
+    color: rgb(0, 0, 0);
+    font-weight: 900;
+}
+.title2{
+    font-size: 3rem;
+    font-family: 'Irish Grover', cursive;
+    color: grey;
+    font-weight: 500;
+    position: absolute;
+    left: 1rem;
+    bottom: 15rem;
+}
+.firstsection{
+    position: relative;
+}
+
+.firstsection::before{
+    content: "";
+    background: url(images/bg2.avif) no-repeat center center/cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    opacity: 0.3;
+}
+
+.title span{
+    color: rgb(255, 217, 0);
+}
+.icons{
+    width: 80%;
+    padding: 1rem 1rem;
+    font-size: 2rem;
+    position: absolute;
+    color: grey;
+    left: 1rem;
+    bottom: 10rem;
+}
+.icons i{
+    margin-right: 1rem;
+    transition: all 0.5s;
+}
+.icons i:hover{
+    color: black;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+@media(max-width:500px){
+    .title{
+        font-size: 3rem;
+    }
+    .title2{
+        font-size: 2rem;
+    }
+}
+
+
+
+/* second section */
+
+.padding{
+    padding: 0;
+}
+
+.secondsection{
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.secondrow{
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-part{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0rem;
+    background-color: #e6e7e8;
+    opacity: 0.8;
+}
+
+.image-container{
+    height: 80%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-container img{
+    height: 100%;
+    box-shadow: 4px 5px 1px rgba(0,0,0,0.2);
+}
+
+/* rightpart */
+.right-part{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0rem;
+    background-color: antiquewhite;
+    background-color: #fff;
+    opacity: 0.8;
+}
+.right-part-row{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.right-part-col{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 80%;
+}
+.right-part-container{
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    
+}
+
+.headingabout h1{
+    font-size: 5rem;
+    font-weight: 900;
+    font-family: 'Reenie Beanie', cursive;
+    text-shadow: 15px 8px 3px rgba(0,0,0,0.2);
+}
+
+.about-me .p1{
+    margin-top: 1rem;
+    font-size: 3rem;
+    font-family: 'Irish Grover', cursive;
+    /* text-shadow: 10px 8px 1px rgba(0,0,0,0.2); */
+}
+.about-me .p2{
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-family: 'Irish Grover', cursive;
+}
+
+.Download{
+    margin-top: 3rem;
+}
+
+@media(max-width:978px){
+    .headingabout h1{
+        font-size: 3.5rem;
+    }
+    .about-me .p1{
+        font-size: 2.5rem;
+    }
+    .about-me .p2{
+        margin-top: 1rem;
+        font-size: 1.8rem;
+        font-family: 'Irish Grover', cursive;
+    }
+    @media(max-width:500px){
+        .left-part{
+            display: none;
+        }
+    }
+
+}
+@media(max-width:798px){
+    .headingabout h1{
+        font-size: 3rem;
+    }
+    .about-me .p1{
+        font-size: 2rem;
+    }
+    .about-me .p2{
+        margin-top: 1rem;
+        font-size: 1.5rem;
+        font-family: 'Irish Grover', cursive;
+    }
+    @media(max-width:500px){
+        .left-part{
+            display: none;
+        }
+    }
+
+}
+@media(max-width:658px){
+    .headingabout h1{
+        font-size: 2rem;
+    }
+    .about-me .p1{
+        font-size: 1.5rem;
+    }
+    .about-me .p2{
+        margin-top: 1rem;
+        font-size: 1rem;
+        font-family: 'Irish Grover', cursive;
+    }
+    @media(max-width:500px){
+        .left-part{
+            display: none;
+        }
+    }
+
+}
+
+/* third */
+
+.thirdsection{
+    width: 100%;
+    height: 85vh;
+    background-color: rgb(145, 116, 78);
+}
+
+.third-row{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    display: flex;
+    align-items: center;
+}
+
+.third-col{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+
+.left-third{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.headingthird{
+    padding: 1rem 1rem;
+    margin: 1rem 1rem;
+}
+.headingthird h1{
+    font-size: 5rem;
+    font-weight: 900;
+    font-family: 'Reenie Beanie', cursive;
+    color: white;
+}
+
+.text{
+    text-shadow: 1px 4px 3px rgba(0,0,0,0.1);
+    color: rgb(11, 11, 10);
+}
+/* rightpart */
+
+
+.right-third-col{
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 1rem;
+}
+.third-right-container{
+    width: 80%;
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-end;
+
+}
+
+.heading-third-right{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: end;
+    width: 100%;
+    height: auto;
+    padding-right: 2rem;
+}
+
+.heading-third-right h1{
+        font-size: 5rem;
+        font-weight: 900;
+        font-family: 'Reenie Beanie', cursive;
+}
+.heading-third-right hr{
+    width: 100%;
+}
+
+.progress-bar{
+    width: 100%;
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 1rem;
+}
+.progress-bar-container{
+    padding: 1rem 1rem;
+    width: 90%;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+.progress{
+    width: 90%;
+    padding: 1rem 0rem ;
+    margin: 0rem 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 5px 5px 1px rgba(0,0,0,0.2);
+    /* align-items: center; */
+}
+.title-right-part{
+    width: 90%;
+    display: flex;
+    justify-content: flex-start;
+    font-family: 'Irish Grover', cursive;
+}
+.title-right-part h3{
+    letter-spacing: 4px;
+
+}
+
+/* Fourthsection */
+
+
+.fourthsection{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(48, 48, 48);
+    background-color: #272727;
+}
+
+.fourth-row{
+    width: 100%;
+    height: 80vh;
+}
+
+.fourth1-col{
+    height: 20vh;
+    display: flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.four-heading-container{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.four-heading-container h1{
+    color: #e6e7e8;
+        font-size: 8rem;
+        font-weight: 900;
+        font-family: 'Reenie Beanie', cursive;
+        text-shadow: 25px 16px 1px rgba(0,0,0,0.1);
+}
+.heading-fourth{
+    width: 60%;
+    margin: 0 1rem;
+}
+
+.balls{
+    width: 50%;
+    margin-left: 5rem;
+    height: 100%;
+}
+
+.balls ul{
+    display: flex;
+    border-bottom: 5px solid #00aeff;
+    border-radius: 1px;
+    width: 60%;
+ }
+ 
+.balls  ul li{
+     width: 3vw;
+     height: 2vh;
+     list-style: none;
+     background-color: #00aeff;
+     margin: auto 10px;
+     border-radius: 50%;
+     animation: bouncing 1s linear infinite alternate-reverse;
+ }
+ 
+ @keyframes bouncing {
+      0%{
+         transform: translateY(0);
+      }
+      50%{
+         transform: translateY(-250%);
+      }
+      100%{
+         transform: translateY(0);
+      }
+ }
+ 
+ .balls ul li:nth-child(2){
+     animation-delay: 0.2s;
+ }
+ .balls ul li:nth-child(3){
+     animation-delay: 0.4s;
+ }
+ .balls ul li:nth-child(4){
+     animation-delay: 0.6s;
+ }
+ .balls ul li:nth-child(5){
+     animation-delay: 0.8s;
+ }
+
+ @media(max-width:980px){
+    .balls ul{
+        width: 75%;
+    }
+    .balls  ul li{
+       min-width: 1vh!important;
+        height: 2vh;
+    }
+ }
+ @media(max-width:840px){
+    .balls ul{
+        width: 120%;
+    }
+   
+ }
+ @media(max-width:550px){
+    .balls{
+        display: none;
+    }
+   
+ }
+
+ /* col-2 */
+
+ .fourth2-col{
+    height: 70vh;
+    /* background-color: #fff; */
+}
+
+.fourth2-row{
+    width: 100%;
+    height: 70vh;
+}
+.card-col{
+    height: 100%;
+    padding: 1rem 1rem ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-container{
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+   
+}
+
+
+.image-container-fourth{
+    width: 90%;
+    height: 350px;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+.image-container-fourth img{
+    width: 100%;
+    height: 80%;
+    box-shadow: 10px 15px 1px rgba(0,0,0,0.2);
+}
+
+.main_div{
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 90%;
+    height: 350px;
+    padding: 1rem 1rem;
+    background-color: #afb2b4;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: all 0.6s;
+    clip-path: circle(20.2% at 100% 0);
+}
+
+.main_div h1{
+    margin: 3rem 0;
+    color: #272727;
+    font-family: 'Irish Grover', cursive;
+}
+.main_div p{
+    color: #272727;
+    line-height: 150%;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.main_div h3{
+    color: #fff;
+    margin-top: 20px;
+}
+
+.main_div:hover{
+    clip-path: circle(141.4% at 100% 0);
+}
+
+.btn{
+    color: black;
+}
+
+.btn::before{
+    border-color: black;
+}
+.btn::after{
+    border-color: black;
+}
+
+@media(max-width:900px){
+    .main_div h1{
+       font-size: 2rem;
+    }
+    .main_div p{
+        font-size: 1rem;
+    }
+}
+
+.main_div ul{
+    padding: 0;
+    margin: 0;
+}
